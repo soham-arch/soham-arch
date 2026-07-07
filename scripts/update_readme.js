@@ -13,12 +13,19 @@ const settings = JSON.parse(fs.readFileSync(settingsPath, 'utf8'));
 const username = settings.github_username;
 const token = process.env.GITHUB_TOKEN;
 
-// Default repositories to display if API fails
+// ============================================================================
+// FALLBACK REPOS — LOCAL DEVELOPMENT ONLY
+// ============================================================================
+// WARNING: These are placeholder values used ONLY when no GITHUB_TOKEN is
+// available (local development). When running in CI with a token, real
+// repository data is fetched from the GitHub API. The stargazers_count
+// values below are NOT real and should never be deployed to the live profile.
+// ============================================================================
 const fallbackRepos = settings.projects.map(p => ({
   name: p.name,
   html_url: p.github_link,
   description: p.description,
-  stargazers_count: 3,
+  stargazers_count: 0,
   forks_count: 0,
   language: p.tech[0]
 }));
@@ -66,24 +73,24 @@ function fetchLatestRepos(username, token) {
   });
 }
 
-// Format repos into clean markdown grid card system
+// Format repos into clean markdown — LIGHT THEME cards
 function formatReposMarkdown(repos) {
   let markdown = '<table width="100%" border="0" cellpadding="8" cellspacing="0">\n';
   
   for (let i = 0; i < repos.length; i += 2) {
     markdown += '  <tr style="border: none;">\n';
     
-    // Left card
+    // Left card — Light theme
     const repoL = repos[i];
     markdown += `    <td width="50%" valign="top" style="border: none; padding-bottom: 15px;">
-      <div style="background-color: #030712; border: 1.5px solid #1e293b; border-radius: 12px; padding: 15px; min-height: 110px;">
-        <h4 style="margin: 0 0 8px 0; font-family: 'Outfit', sans-serif;">
-          <a href="${repoL.html_url}" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 700;">📂 ${repoL.name}</a>
+      <div style="background-color: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 18px; min-height: 120px;">
+        <h4 style="margin: 0 0 10px 0; font-family: 'Space Grotesk', sans-serif;">
+          <a href="${repoL.html_url}" target="_blank" style="color: #0a0a0a; text-decoration: none; font-weight: 700;">📂 ${repoL.name}</a>
         </h4>
-        <p style="margin: 0 0 12px 0; font-size: 12px; color: #94a3b8; line-height: 1.4; font-family: 'Inter', sans-serif;">
+        <p style="margin: 0 0 14px 0; font-size: 13px; color: #475569; line-height: 1.5; font-family: 'Inter', sans-serif;">
           ${repoL.description || 'No description provided.'}
         </p>
-        <div style="font-size: 11px; color: #64748b; font-family: 'JetBrains Mono', monospace;">
+        <div style="font-size: 11px; color: #64748b; font-family: 'Inter', sans-serif;">
           <span style="margin-right: 15px;">⭐ ${repoL.stargazers_count || 0}</span>
           <span style="margin-right: 15px;">🍴 ${repoL.forks_count || 0}</span>
           <span style="color: #3b82f6;">●</span> ${repoL.language || 'Code'}
@@ -95,14 +102,14 @@ function formatReposMarkdown(repos) {
     const repoR = repos[i + 1];
     if (repoR) {
       markdown += `    <td width="50%" valign="top" style="border: none; padding-bottom: 15px;">
-      <div style="background-color: #030712; border: 1.5px solid #1e293b; border-radius: 12px; padding: 15px; min-height: 110px;">
-        <h4 style="margin: 0 0 8px 0; font-family: 'Outfit', sans-serif;">
-          <a href="${repoR.html_url}" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 700;">📂 ${repoR.name}</a>
+      <div style="background-color: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 18px; min-height: 120px;">
+        <h4 style="margin: 0 0 10px 0; font-family: 'Space Grotesk', sans-serif;">
+          <a href="${repoR.html_url}" target="_blank" style="color: #0a0a0a; text-decoration: none; font-weight: 700;">📂 ${repoR.name}</a>
         </h4>
-        <p style="margin: 0 0 12px 0; font-size: 12px; color: #94a3b8; line-height: 1.4; font-family: 'Inter', sans-serif;">
+        <p style="margin: 0 0 14px 0; font-size: 13px; color: #475569; line-height: 1.5; font-family: 'Inter', sans-serif;">
           ${repoR.description || 'No description provided.'}
         </p>
-        <div style="font-size: 11px; color: #64748b; font-family: 'JetBrains Mono', monospace;">
+        <div style="font-size: 11px; color: #64748b; font-family: 'Inter', sans-serif;">
           <span style="margin-right: 15px;">⭐ ${repoR.stargazers_count || 0}</span>
           <span style="margin-right: 15px;">🍴 ${repoR.forks_count || 0}</span>
           <span style="color: #3b82f6;">●</span> ${repoR.language || 'Code'}
