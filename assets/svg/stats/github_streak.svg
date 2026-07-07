@@ -1,77 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 110" width="100%" height="100%">
-  <defs>
-    <style type="text/css">
-      
+  <defs><style type="text/css">
+    
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap');
-  
-  .card-bg {
-    fill: #ffffff;
-    stroke: #e2e8f0;
-    stroke-width: 1.5;
-    rx: 12px;
-  }
-  .header-title {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    fill: #0a0a0a;
-    letter-spacing: 0.02em;
-  }
-  .label-text {
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    fill: #64748b;
-  }
-  .value-text {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    fill: #0a0a0a;
-  }
+  .card-bg { fill: #0a0f1e; stroke: #1e293b; stroke-width: 1; rx: 12px; }
+  .header-title { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; fill: #e2e8f0; letter-spacing: 0.02em; }
+  .label-text { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 400; fill: #64748b; }
+  .value-text { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; fill: #f1f5f9; }
 
-      .streak-val {
-        font-family: 'Space Grotesk', system-ui, sans-serif;
-        font-size: 26px;
-        font-weight: 700;
-        fill: #0a0a0a;
-      }
-      .streak-label {
-        font-family: 'Space Grotesk', system-ui, sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        fill: #64748b;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-      }
-    </style>
-  </defs>
-
+    .streak-val { font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700; fill: #f1f5f9; }
+    .streak-label { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 600; fill: #64748b; letter-spacing: 0.05em; text-transform: uppercase; }
+  </style></defs>
   <rect width="100%" height="100%" class="card-bg" />
-  <path d="M 30 0 L 150 0" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round" />
-
-  <!-- Columns -->
-  <!-- Col 1: Total Contributions -->
+  <path d="M 30 0 L 150 0" stroke="#10b981" stroke-width="2" stroke-linecap="round" />
   <g transform="translate(60, 30)">
     <text x="0" y="15" class="streak-label">Total Contributions</text>
-    <text x="0" y="50" class="streak-val" fill="#0a0a0a">175</text>
+    <text x="0" y="50" class="streak-val" fill="#38bdf8">175</text>
   </g>
-
-  <!-- Divider -->
-  <line x1="280" y1="20" x2="280" y2="90" stroke="#e2e8f0" stroke-width="1.5" />
-
-  <!-- Col 2: Current Streak -->
+  <line x1="280" y1="20" x2="280" y2="90" stroke="#1e293b" stroke-width="1.5" />
   <g transform="translate(320, 30)">
-    <text x="0" y="15" class="streak-label" fill="#dc2626">🔥 Current Streak</text>
-    <text x="0" y="50" class="streak-val" fill="#dc2626">0 <tspan font-size="14" font-family="Inter" fill="#64748b" font-weight="400">days</tspan></text>
+    <text x="0" y="15" class="streak-label" fill="#f43f5e">🔥 Current Streak</text>
+    <text x="0" y="50" class="streak-val" fill="#f43f5e">0 <tspan font-size="14" font-family="Inter" fill="#64748b" font-weight="400">days</tspan></text>
   </g>
-
-  <!-- Divider -->
-  <line x1="520" y1="20" x2="520" y2="90" stroke="#e2e8f0" stroke-width="1.5" />
-
-  <!-- Col 3: Longest Streak -->
+  <line x1="520" y1="20" x2="520" y2="90" stroke="#1e293b" stroke-width="1.5" />
   <g transform="translate(560, 30)">
-    <text x="0" y="15" class="streak-label" fill="#ca8a04">🏆 Longest Streak</text>
-    <text x="0" y="50" class="streak-val" fill="#ca8a04">0 <tspan font-size="14" font-family="Inter" fill="#64748b" font-weight="400">days</tspan></text>
+    <text x="0" y="15" class="streak-label" fill="#eab308">🏆 Longest Streak</text>
+    <text x="0" y="50" class="streak-val" fill="#eab308">0 <tspan font-size="14" font-family="Inter" fill="#64748b" font-weight="400">days</tspan></text>
   </g>
 </svg>

@@ -265,7 +265,7 @@ Here are the repositories I've been actively developing lately:
 
   <!-- FOOTER -->
   <sub>
-    Designed with a clean light theme by Soham Patil.<br/>
+    Designed with a dark-mode system by Soham Patil.<br/>
     🤖 Profile engine compiled automatically. Last update: <!-- START_SECTION:update_date -->2026-07-07<!-- END_SECTION:update_date -->.
   </sub>
 

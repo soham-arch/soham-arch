@@ -1,40 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%" height="100%">
   <defs>
-    <!-- Fonts -->
     <style type="text/css">
       @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap');
       
       .title-text {
-        font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+        font-family: 'Space Grotesk', system-ui, sans-serif;
         font-weight: 900;
-        font-size: 52px;
-        fill: #0a0a0a;
+        font-size: 50px;
+        fill: #ffffff;
         letter-spacing: -0.03em;
       }
+      
+      .gradient-text { fill: url(#title-grad); }
       
       .subtitle-text {
         font-family: 'Inter', system-ui, sans-serif;
         font-weight: 600;
         font-size: 20px;
-        fill: #0a0a0a;
+        fill: #38bdf8;
         letter-spacing: -0.01em;
       }
 
       .tagline-text {
-        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        font-family: 'Inter', system-ui, sans-serif;
         font-weight: 500;
         font-size: 13px;
         fill: #64748b;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
       }
       
-      /* Cycling Text Animation — KEPT per user request */
       .cycle-text {
         opacity: 0;
         animation: textCycle 9s infinite;
       }
-      
       .cycle-1 { animation-delay: 0s; }
       .cycle-2 { animation-delay: 3s; }
       .cycle-3 { animation-delay: 6s; }
@@ -47,51 +46,102 @@
         100% { opacity: 0; }
       }
 
-      /* Cursor blinking */
       .cursor {
         animation: blink 0.8s infinite;
-        fill: #0a0a0a;
+        fill: #38bdf8;
       }
       @keyframes blink {
         0%, 100% { opacity: 1; }
         50% { opacity: 0; }
       }
+
+      /* Clean orbit animation */
+      .orbit-ring {
+        animation: rotateOrbit 20s linear infinite;
+        transform-origin: center;
+      }
+      @keyframes rotateOrbit {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .pulse-dot {
+        animation: pulseDot 3s ease-in-out infinite alternate;
+      }
+      @keyframes pulseDot {
+        0% { r: 3; fill-opacity: 0.6; }
+        100% { r: 5; fill-opacity: 1; }
+      }
+
+      .glow-line {
+        stroke-dasharray: 6 14;
+        animation: dashGlow 20s linear infinite;
+      }
+      @keyframes dashGlow {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -400; }
+      }
     </style>
+
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#0a0f1e" />
+    </linearGradient>
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <radialGradient id="ambient" cx="75%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#1e3a5f" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#020617" stop-opacity="0" />
+    </radialGradient>
   </defs>
 
-  <!-- Background — Clean white/off-white, no grid, no animated shapes -->
-  <rect width="100%" height="100%" fill="#ffffff" rx="16" stroke="#e2e8f0" stroke-width="1.5" />
-  
-  <!-- Subtle accent line at top -->
-  <path d="M 30 0 L 200 0" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round" opacity="0.4" />
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-grad)" rx="16" stroke="#1e293b" stroke-width="1" />
+  <rect width="100%" height="100%" fill="url(#ambient)" rx="16" />
 
-  <!-- BRAND NAME & DETAILS -->
-  <g transform="translate(60, 0)">
-    <!-- Tagline above name -->
-    <text x="0" y="65" class="tagline-text">BUILDING INTELLIGENT PRODUCTS</text>
-    
-    <!-- Name — dominant display text -->
-    <text x="0" y="125" class="title-text">Soham Patil</text>
+  <!-- Text Content -->
+  <g transform="translate(55, 0)">
+    <text x="0" y="70" class="tagline-text">BUILDING INTELLIGENT PRODUCTS</text>
+    <text x="0" y="130" class="title-text">Soham <tspan class="gradient-text">Patil</tspan></text>
 
-    <!-- Cycling Subtitle — TYPING ANIMATION PRESERVED -->
-    <g transform="translate(0, 170)">
-      <!-- Minimal prompt indicator -->
-      <text x="0" y="0" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#94a3b8">› </text>
-      
-      <!-- Subheading 1 -->
-      <text x="22" y="0" class="subtitle-text cycle-text cycle-1">AI Engineer</text>
-      <!-- Subheading 2 -->
-      <text x="22" y="0" class="subtitle-text cycle-text cycle-2">Full Stack Developer</text>
-      <!-- Subheading 3 -->
-      <text x="22" y="0" class="subtitle-text cycle-text cycle-3">Building Intelligent Products</text>
-
-      <!-- Cursor -->
-      <rect x="290" y="-18" width="2" height="22" class="cursor" rx="1" />
+    <g transform="translate(0, 175)">
+      <text x="0" y="0" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#334155">› </text>
+      <text x="20" y="0" class="subtitle-text cycle-text cycle-1">AI Engineer</text>
+      <text x="20" y="0" class="subtitle-text cycle-text cycle-2">Full Stack Developer</text>
+      <text x="20" y="0" class="subtitle-text cycle-text cycle-3">Building Intelligent Products</text>
+      <rect x="300" y="-18" width="2" height="22" class="cursor" rx="1" />
     </g>
 
-    <!-- Brief Bio Description -->
-    <text x="0" y="210" font-family="'Inter', system-ui, sans-serif" font-size="14" fill="#64748b" font-weight="400">
+    <text x="0" y="220" font-family="'Inter', sans-serif" font-size="13" fill="#475569" font-weight="400">
       AI Engineering · Computer Vision · Full Stack Development
     </text>
+  </g>
+
+  <!-- Clean geometric graphic (right side) -->
+  <g transform="translate(640, 140)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="65" fill="none" stroke="#1e293b" stroke-width="1" />
+    <!-- Inner ring -->
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-dasharray="3 6" />
+    
+    <!-- Orbiting dots -->
+    <g class="orbit-ring">
+      <circle cx="65" cy="0" r="3.5" fill="#38bdf8" class="pulse-dot" />
+      <circle cx="-65" cy="0" r="2.5" fill="#6366f1" class="pulse-dot" style="animation-delay: -1.5s;" />
+    </g>
+    <g class="orbit-ring" style="animation-direction: reverse; animation-duration: 14s;">
+      <circle cx="0" cy="40" r="2.5" fill="#818cf8" class="pulse-dot" style="animation-delay: -0.8s;" />
+      <circle cx="0" cy="-40" r="2" fill="#38bdf8" class="pulse-dot" style="animation-delay: -2s;" />
+    </g>
+
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="6" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="0" cy="0" r="2.5" fill="#38bdf8" />
+    
+    <!-- Connecting arc -->
+    <path d="M-50,-38 Q0,-70 50,-38" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.3" class="glow-line" />
+    <path d="M-50,38 Q0,70 50,38" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.3" class="glow-line" style="animation-delay: -5s;" />
   </g>
 </svg>

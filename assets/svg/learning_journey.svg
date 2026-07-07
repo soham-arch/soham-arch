@@ -2,131 +2,92 @@
   <defs>
     <style type="text/css">
       @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Inter:wght@400;500&amp;display=swap');
-      
-      .milestone-title {
-        font-family: 'Space Grotesk', system-ui, sans-serif;
-        font-size: 14px;
-        font-weight: 700;
-        fill: #0a0a0a;
-      }
-      
-      .milestone-detail {
-        font-family: 'Inter', system-ui, sans-serif;
-        font-size: 12px;
-        fill: #64748b;
-        font-weight: 400;
-      }
+      .milestone-title { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; fill: #e2e8f0; }
+      .milestone-detail { font-family: 'Inter', sans-serif; font-size: 12px; fill: #64748b; font-weight: 400; }
+      .node-pulse { animation: nodePulse 3s ease-in-out infinite alternate; }
+      @keyframes nodePulse { 0% { r: 6; fill-opacity: 0.15; } 100% { r: 10; fill-opacity: 0.3; } }
     </style>
+    <linearGradient id="timeline-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" /><stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="100%" height="100%" fill="#ffffff" rx="16" stroke="#e2e8f0" stroke-width="1.5" />
+  <rect width="100%" height="100%" fill="#0a0f1e" rx="16" stroke="#1e293b" stroke-width="1" />
 
   <!-- Vertical Timeline Line -->
-  <line x1="40" y1="50" x2="40" y2="610" stroke="#e2e8f0" stroke-width="2" stroke-linecap="round" />
+  <line x1="40" y1="50" x2="40" y2="610" stroke="#1e293b" stroke-width="2" stroke-linecap="round" />
+  <line x1="40" y1="50" x2="40" y2="610" stroke="url(#timeline-grad)" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 8" opacity="0.5" />
 
-  <!-- NODE 1: Started Programming -->
   <g>
-    <!-- Node circle -->
-    <circle cx="40" cy="50" r="6" fill="#ffffff" stroke="#0a0a0a" stroke-width="2.5" />
-    <circle cx="40" cy="50" r="2.5" fill="#0a0a0a" />
-    
-    <!-- Milestone title -->
+    <!-- Pulse glow -->
+    <circle cx="40" cy="50" r="7" fill="#818cf8" fill-opacity="0.15" class="node-pulse" style="animation-delay: -0.0s;" />
+    <!-- Core node -->
+    <circle cx="40" cy="50" r="5" fill="#0a0f1e" stroke="#818cf8" stroke-width="2.5" />
+    <circle cx="40" cy="50" r="2" fill="#818cf8" />
     <text x="70" y="46" class="milestone-title">Started Programming</text>
-    
-    <!-- Milestone detail -->
     <text x="70" y="64" class="milestone-detail">Learned algorithms and core computer science fundamentals.</text>
   </g>
-  
-  <!-- NODE 2: Android Development -->
   <g>
-    <!-- Node circle -->
-    <circle cx="40" cy="130" r="6" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5" />
-    <circle cx="40" cy="130" r="2.5" fill="#3b82f6" />
-    
-    <!-- Milestone title -->
+    <!-- Pulse glow -->
+    <circle cx="40" cy="130" r="7" fill="#818cf8" fill-opacity="0.15" class="node-pulse" style="animation-delay: -0.5s;" />
+    <!-- Core node -->
+    <circle cx="40" cy="130" r="5" fill="#0a0f1e" stroke="#818cf8" stroke-width="2.5" />
+    <circle cx="40" cy="130" r="2" fill="#818cf8" />
     <text x="70" y="126" class="milestone-title">Android Development</text>
-    
-    <!-- Milestone detail -->
     <text x="70" y="144" class="milestone-detail">Built native mobile experiences and mobile user interactions.</text>
   </g>
-  
-  <!-- NODE 3: Firebase -->
   <g>
-    <!-- Node circle -->
-    <circle cx="40" cy="210" r="6" fill="#ffffff" stroke="#0a0a0a" stroke-width="2.5" />
-    <circle cx="40" cy="210" r="2.5" fill="#0a0a0a" />
-    
-    <!-- Milestone title -->
+    <!-- Pulse glow -->
+    <circle cx="40" cy="210" r="7" fill="#818cf8" fill-opacity="0.15" class="node-pulse" style="animation-delay: -1.0s;" />
+    <!-- Core node -->
+    <circle cx="40" cy="210" r="5" fill="#0a0f1e" stroke="#818cf8" stroke-width="2.5" />
+    <circle cx="40" cy="210" r="2" fill="#818cf8" />
     <text x="70" y="206" class="milestone-title">Firebase</text>
-    
-    <!-- Milestone detail -->
     <text x="70" y="224" class="milestone-detail">Architected real-time synchronizations and serverless databases.</text>
   </g>
-  
-  <!-- NODE 4: Full Stack -->
   <g>
-    <!-- Node circle -->
-    <circle cx="40" cy="290" r="6" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5" />
-    <circle cx="40" cy="290" r="2.5" fill="#3b82f6" />
-    
-    <!-- Milestone title -->
+    <!-- Pulse glow -->
+    <circle cx="40" cy="290" r="7" fill="#3b82f6" fill-opacity="0.15" class="node-pulse" style="animation-delay: -1.5s;" />
+    <!-- Core node -->
+    <circle cx="40" cy="290" r="5" fill="#0a0f1e" stroke="#3b82f6" stroke-width="2.5" />
+    <circle cx="40" cy="290" r="2" fill="#3b82f6" />
     <text x="70" y="286" class="milestone-title">Full Stack</text>
-    
-    <!-- Milestone detail -->
     <text x="70" y="304" class="milestone-detail">Developed responsive web architectures and solid REST API backends.</text>
   </g>
-  
-  <!-- NODE 5: AI Projects -->
   <g>
-    <!-- Node circle -->
-    <circle cx="40" cy="370" r="6" fill="#ffffff" stroke="#0a0a0a" stroke-width="2.5" />
-    <circle cx="40" cy="370" r="2.5" fill="#0a0a0a" />
-    
-    <!-- Milestone title -->
+    <!-- Pulse glow -->
+    <circle cx="40" cy="370" r="7" fill="#3b82f6" fill-opacity="0.15" class="node-pulse" style="animation-delay: -2.0s;" />
+    <!-- Core node -->
+    <circle cx="40" cy="370" r="5" fill="#0a0f1e" stroke="#3b82f6" stroke-width="2.5" />
+    <circle cx="40" cy="370" r="2" fill="#3b82f6" />
     <text x="70" y="366" class="milestone-title">AI Projects</text>
-    
-    <!-- Milestone detail -->
     <text x="70" y="384" class="milestone-detail">Transitioned to building intelligent products using deep neural networks.</text>
   </g>
-  
-  <!-- NODE 6: Computer Vision -->
   <g>
-    <!-- Node circle -->
-    <circle cx="40" cy="450" r="6" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5" />
-    <circle cx="40" cy="450" r="2.5" fill="#3b82f6" />
-    
-    <!-- Milestone title -->
+    <!-- Pulse glow -->
+    <circle cx="40" cy="450" r="7" fill="#38bdf8" fill-opacity="0.15" class="node-pulse" style="animation-delay: -2.5s;" />
+    <!-- Core node -->
+    <circle cx="40" cy="450" r="5" fill="#0a0f1e" stroke="#38bdf8" stroke-width="2.5" />
+    <circle cx="40" cy="450" r="2" fill="#38bdf8" />
     <text x="70" y="446" class="milestone-title">Computer Vision</text>
-    
-    <!-- Milestone detail -->
     <text x="70" y="464" class="milestone-detail">Worked with CNNs, face embeddings, and real-time image processing.</text>
   </g>
-  
-  <!-- NODE 7: RAG Architectures -->
   <g>
-    <!-- Node circle -->
-    <circle cx="40" cy="530" r="6" fill="#ffffff" stroke="#0a0a0a" stroke-width="2.5" />
-    <circle cx="40" cy="530" r="2.5" fill="#0a0a0a" />
-    
-    <!-- Milestone title -->
+    <!-- Pulse glow -->
+    <circle cx="40" cy="530" r="7" fill="#38bdf8" fill-opacity="0.15" class="node-pulse" style="animation-delay: -3.0s;" />
+    <!-- Core node -->
+    <circle cx="40" cy="530" r="5" fill="#0a0f1e" stroke="#38bdf8" stroke-width="2.5" />
+    <circle cx="40" cy="530" r="2" fill="#38bdf8" />
     <text x="70" y="526" class="milestone-title">RAG Architectures</text>
-    
-    <!-- Milestone detail -->
     <text x="70" y="544" class="milestone-detail">Integrated vector search engines with LLMs to query domain-specific data.</text>
   </g>
-  
-  <!-- NODE 8: Agentic AI -->
   <g>
-    <!-- Node circle -->
-    <circle cx="40" cy="610" r="6" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5" />
-    <circle cx="40" cy="610" r="2.5" fill="#3b82f6" />
-    
-    <!-- Milestone title -->
+    <!-- Pulse glow -->
+    <circle cx="40" cy="610" r="7" fill="#38bdf8" fill-opacity="0.15" class="node-pulse" style="animation-delay: -3.5s;" />
+    <!-- Core node -->
+    <circle cx="40" cy="610" r="5" fill="#0a0f1e" stroke="#38bdf8" stroke-width="2.5" />
+    <circle cx="40" cy="610" r="2" fill="#38bdf8" />
     <text x="70" y="606" class="milestone-title">Agentic AI</text>
-    
-    <!-- Milestone detail -->
     <text x="70" y="624" class="milestone-detail">Building autonomous, tool-calling multi-agent execution graphs.</text>
   </g>
-  
 </svg>
