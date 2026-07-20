@@ -14,7 +14,7 @@
   <path d="M 30 0 L 150 0" stroke="#10b981" stroke-width="2" stroke-linecap="round" />
   <g transform="translate(60, 30)">
     <text x="0" y="15" class="streak-label">Total Contributions</text>
-    <text x="0" y="50" class="streak-val" fill="#38bdf8">45</text>
+    <text x="0" y="50" class="streak-val" fill="#38bdf8">44</text>
   </g>
   <line x1="280" y1="20" x2="280" y2="90" stroke="#1e293b" stroke-width="1.5" />
   <g transform="translate(320, 30)">
