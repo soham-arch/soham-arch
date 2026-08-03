@@ -246,23 +246,6 @@ Here are the repositories I've been actively developing lately:
     <td width="50%" valign="top" style="border: none; padding-bottom: 15px;">
       <div style="background-color: #0a0f1e; border: 1px solid #1e293b; border-radius: 12px; padding: 18px; min-height: 120px;">
         <h4 style="margin: 0 0 10px 0; font-family: sans-serif;">
-          <a href="https://github.com/soham-arch/Mindmirror-backend" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 700;">📂 Mindmirror-backend</a>
-        </h4>
-        <p style="margin: 0 0 14px 0; font-size: 13px; color: #94a3b8; line-height: 1.5; font-family: sans-serif;">
-          No description provided.
-        </p>
-        <div style="font-size: 11px; color: #64748b; font-family: sans-serif;">
-          <span style="margin-right: 15px;">⭐ 0</span>
-          <span style="margin-right: 15px;">🍴 0</span>
-          <span style="color: #3b82f6;">●</span> JavaScript
-        </div>
-      </div>
-    </td>
-  </tr>
-  <tr style="border: none;">
-    <td width="50%" valign="top" style="border: none; padding-bottom: 15px;">
-      <div style="background-color: #0a0f1e; border: 1px solid #1e293b; border-radius: 12px; padding: 18px; min-height: 120px;">
-        <h4 style="margin: 0 0 10px 0; font-family: sans-serif;">
           <a href="https://github.com/soham-arch/SHMS-Helical-Spring-Optimization" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 700;">📂 SHMS-Helical-Spring-Optimization</a>
         </h4>
         <p style="margin: 0 0 14px 0; font-size: 13px; color: #94a3b8; line-height: 1.5; font-family: sans-serif;">
@@ -275,6 +258,8 @@ Here are the repositories I've been actively developing lately:
         </div>
       </div>
     </td>
+  </tr>
+  <tr style="border: none;">
     <td width="50%" valign="top" style="border: none; padding-bottom: 15px;">
       <div style="background-color: #0a0f1e; border: 1px solid #1e293b; border-radius: 12px; padding: 18px; min-height: 120px;">
         <h4 style="margin: 0 0 10px 0; font-family: sans-serif;">
@@ -287,6 +272,21 @@ Here are the repositories I've been actively developing lately:
           <span style="margin-right: 15px;">⭐ 0</span>
           <span style="margin-right: 15px;">🍴 0</span>
           <span style="color: #3b82f6;">●</span> JavaScript
+        </div>
+      </div>
+    </td>
+    <td width="50%" valign="top" style="border: none; padding-bottom: 15px;">
+      <div style="background-color: #0a0f1e; border: 1px solid #1e293b; border-radius: 12px; padding: 18px; min-height: 120px;">
+        <h4 style="margin: 0 0 10px 0; font-family: sans-serif;">
+          <a href="https://github.com/soham-arch/ahilyanagar-municipal-project" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 700;">📂 ahilyanagar-municipal-project</a>
+        </h4>
+        <p style="margin: 0 0 14px 0; font-size: 13px; color: #94a3b8; line-height: 1.5; font-family: sans-serif;">
+          No description provided.
+        </p>
+        <div style="font-size: 11px; color: #64748b; font-family: sans-serif;">
+          <span style="margin-right: 15px;">⭐ 0</span>
+          <span style="margin-right: 15px;">🍴 0</span>
+          <span style="color: #3b82f6;">●</span> Dart
         </div>
       </div>
     </td>
@@ -331,7 +331,7 @@ Here are the repositories I've been actively developing lately:
   <!-- FOOTER -->
   <sub>
     Designed with a dark-mode system by Soham Patil.<br/>
-    🤖 Profile engine compiled automatically. Last update: <!-- START_SECTION:update_date -->2026-08-02<!-- END_SECTION:update_date -->.
+    🤖 Profile engine compiled automatically. Last update: <!-- START_SECTION:update_date -->2026-08-03<!-- END_SECTION:update_date -->.
   </sub>
 
 </div>
