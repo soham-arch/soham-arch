@@ -19,7 +19,7 @@
   <line x1="280" y1="20" x2="280" y2="90" stroke="#1e293b" stroke-width="1.5" />
   <g transform="translate(320, 30)">
     <text x="0" y="15" class="streak-label" fill="#f43f5e">🔥 Current Streak</text>
-    <text x="0" y="50" class="streak-val" fill="#f43f5e">1 <tspan font-size="14" font-family="Inter" fill="#64748b" font-weight="400">days</tspan></text>
+    <text x="0" y="50" class="streak-val" fill="#f43f5e">0 <tspan font-size="14" font-family="Inter" fill="#64748b" font-weight="400">days</tspan></text>
   </g>
   <line x1="520" y1="20" x2="520" y2="90" stroke="#1e293b" stroke-width="1.5" />
   <g transform="translate(560, 30)">
