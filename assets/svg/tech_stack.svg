@@ -1,230 +1,177 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 405" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 366" width="100%" height="100%">
   <defs>
     <style type="text/css">
-      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Inter:wght@400;500&amp;display=swap');
-      .card-bg { fill: #0a0f1e; stroke: #1e293b; stroke-width: 1; rx: 12px; }
-      .card-header { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; fill: #e2e8f0; letter-spacing: 0.02em; }
-      .pill-bg { fill: #0d1527; stroke: #1e293b; stroke-width: 1; rx: 6px; }
-      .pill-text { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; fill: #94a3b8; }
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap');
+      .card-bg { fill: #09090b; stroke: #27272a; stroke-width: 1; rx: 8px; }
+      .card-header { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 13px; font-weight: 600; fill: #f4f4f5; letter-spacing: 0.04em; text-transform: uppercase; }
+      .card-subline { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #71717a; }
+      .pill-bg { fill: #141416; stroke: #27272a; stroke-width: 1; rx: 4px; }
+      .pill-text { font-family: 'JetBrains Mono', monospace, ui-monospace; font-size: 11px; font-weight: 500; fill: #d4d4d8; }
     </style>
   </defs>
   <rect width="100%" height="100%" fill="none" />
 
-  <g transform="translate(10, 10)">
-    <rect width="250" height="185" class="card-bg" />
-    <path d="M 20 0 L 230 0" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" opacity="0.7" />
-    <circle cx="20" cy="30" r="4" fill="#38bdf8" />
-    <text x="32" y="34" class="card-header">Languages</text>
-    <g transform="translate(15, 55)">
+  <g transform="translate(0, 0)">
+    <rect width="282.6666666666667" height="175" class="card-bg" />
+    <!-- Fine technical corner accent -->
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#52525b" stroke-width="1.5" />
+    <circle cx="20" cy="24" r="3" fill="#d4d4d8" />
+    <text x="32" y="28" class="card-header">Languages</text>
+    <line x1="20" y1="42" x2="262.6666666666667" y2="42" stroke="#1f1f23" stroke-width="1" />
+    <g transform="translate(18, 56)">
+      <g transform="translate(0, 0)">
+        <rect width="84" height="24" class="pill-bg" />
+        <text x="42" y="16" text-anchor="middle" class="pill-text">TypeScript</text>
+      </g>
+      <g transform="translate(90, 0)">
+        <rect width="57" height="24" class="pill-bg" />
+        <text x="28.5" y="16" text-anchor="middle" class="pill-text">Python</text>
+      </g>
+      <g transform="translate(153, 0)">
+        <rect width="84" height="24" class="pill-bg" />
+        <text x="42" y="16" text-anchor="middle" class="pill-text">JavaScript</text>
+      </g>
+      <g transform="translate(0, 32)">
+        <rect width="44" height="24" class="pill-bg" />
+        <text x="22" y="16" text-anchor="middle" class="pill-text">Dart</text>
+      </g>
+      <g transform="translate(50, 32)">
+        <rect width="37" height="24" class="pill-bg" />
+        <text x="18.5" y="16" text-anchor="middle" class="pill-text">C++</text>
+      </g>
+      <g transform="translate(93, 32)">
+        <rect width="37" height="24" class="pill-bg" />
+        <text x="18.5" y="16" text-anchor="middle" class="pill-text">SQL</text>
+      </g>
+      <g transform="translate(136, 32)">
+        <rect width="71" height="24" class="pill-bg" />
+        <text x="35.5" y="16" text-anchor="middle" class="pill-text">HTML/CSS</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(298.6666666666667, 0)">
+    <rect width="282.6666666666667" height="175" class="card-bg" />
+    <!-- Fine technical corner accent -->
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#52525b" stroke-width="1.5" />
+    <circle cx="20" cy="24" r="3" fill="#d4d4d8" />
+    <text x="32" y="28" class="card-header">Frontend</text>
+    <line x1="20" y1="42" x2="262.6666666666667" y2="42" stroke="#1f1f23" stroke-width="1" />
+    <g transform="translate(18, 56)">
       <g transform="translate(0, 0)">
         <rect width="64" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#38bdf8" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">Python</text>
+        <text x="32" y="16" text-anchor="middle" class="pill-text">Next.js</text>
       </g>
       <g transform="translate(70, 0)">
-        <rect width="88" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#38bdf8" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">JavaScript</text>
+        <rect width="50" height="24" class="pill-bg" />
+        <text x="25" y="16" text-anchor="middle" class="pill-text">React</text>
+      </g>
+      <g transform="translate(126, 0)">
+        <rect width="98" height="24" class="pill-bg" />
+        <text x="49" y="16" text-anchor="middle" class="pill-text">Tailwind CSS</text>
       </g>
       <g transform="translate(0, 32)">
-        <rect width="88" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#38bdf8" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">TypeScript</text>
+        <rect width="50" height="24" class="pill-bg" />
+        <text x="25" y="16" text-anchor="middle" class="pill-text">Astro</text>
       </g>
-      <g transform="translate(94, 32)">
-        <rect width="45" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#38bdf8" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">C++</text>
-      </g>
-      <g transform="translate(0, 64)">
-        <rect width="76" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#38bdf8" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">HTML/CSS</text>
-      </g>
-      <g transform="translate(82, 64)">
-        <rect width="45" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#38bdf8" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">SQL</text>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(275, 10)">
-    <rect width="250" height="185" class="card-bg" />
-    <path d="M 20 0 L 230 0" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" opacity="0.7" />
-    <circle cx="20" cy="30" r="4" fill="#3b82f6" />
-    <text x="32" y="34" class="card-header">Frontend</text>
-    <g transform="translate(15, 55)">
-      <g transform="translate(0, 0)">
-        <rect width="57" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#3b82f6" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">React</text>
-      </g>
-      <g transform="translate(63, 0)">
-        <rect width="101" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#3b82f6" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">React Native</text>
-      </g>
-      <g transform="translate(0, 32)">
-        <rect width="70" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#3b82f6" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">Next.js</text>
-      </g>
-      <g transform="translate(76, 32)">
-        <rect width="57" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#3b82f6" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">HTML5</text>
-      </g>
-      <g transform="translate(139, 32)">
-        <rect width="51" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#3b82f6" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">CSS3</text>
-      </g>
-      <g transform="translate(0, 64)">
-        <rect width="95" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#3b82f6" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">TailwindCSS</text>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(540, 10)">
-    <rect width="250" height="185" class="card-bg" />
-    <path d="M 20 0 L 230 0" stroke="#818cf8" stroke-width="2" stroke-linecap="round" opacity="0.7" />
-    <circle cx="20" cy="30" r="4" fill="#818cf8" />
-    <text x="32" y="34" class="card-header">Backend</text>
-    <g transform="translate(15, 55)">
-      <g transform="translate(0, 0)">
-        <rect width="70" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#818cf8" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">Node.js</text>
-      </g>
-      <g transform="translate(76, 0)">
-        <rect width="70" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#818cf8" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">Express</text>
-      </g>
-      <g transform="translate(0, 32)">
-        <rect width="70" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#818cf8" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">FastAPI</text>
-      </g>
-      <g transform="translate(76, 32)">
+      <g transform="translate(56, 32)">
         <rect width="64" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#818cf8" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">Django</text>
-      </g>
-      <g transform="translate(0, 64)">
-        <rect width="82" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#818cf8" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">REST APIs</text>
+        <text x="32" y="16" text-anchor="middle" class="pill-text">Flutter</text>
       </g>
     </g>
   </g>
-  <g transform="translate(10, 210)">
-    <rect width="250" height="185" class="card-bg" />
-    <path d="M 20 0 L 230 0" stroke="#10b981" stroke-width="2" stroke-linecap="round" opacity="0.7" />
-    <circle cx="20" cy="30" r="4" fill="#10b981" />
-    <text x="32" y="34" class="card-header">Databases</text>
-    <g transform="translate(15, 55)">
+  <g transform="translate(597.3333333333334, 0)">
+    <rect width="282.6666666666667" height="175" class="card-bg" />
+    <!-- Fine technical corner accent -->
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#52525b" stroke-width="1.5" />
+    <circle cx="20" cy="24" r="3" fill="#d4d4d8" />
+    <text x="32" y="28" class="card-header">Backend</text>
+    <line x1="20" y1="42" x2="262.6666666666667" y2="42" stroke="#1f1f23" stroke-width="1" />
+    <g transform="translate(18, 56)">
       <g transform="translate(0, 0)">
-        <rect width="70" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#10b981" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">MongoDB</text>
-      </g>
-      <g transform="translate(76, 0)">
-        <rect width="88" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#10b981" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">PostgreSQL</text>
-      </g>
-      <g transform="translate(0, 32)">
-        <rect width="138" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#10b981" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">Firebase Firestore</text>
-      </g>
-      <g transform="translate(0, 64)">
-        <rect width="138" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#10b981" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">Milvus (Vector DB)</text>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(275, 210)">
-    <rect width="250" height="185" class="card-bg" />
-    <path d="M 20 0 L 230 0" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" opacity="0.7" />
-    <circle cx="20" cy="30" r="4" fill="#a78bfa" />
-    <text x="32" y="34" class="card-header">Artificial Intelligence</text>
-    <g transform="translate(15, 55)">
-      <g transform="translate(0, 0)">
-        <rect width="70" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#a78bfa" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">PyTorch</text>
-      </g>
-      <g transform="translate(76, 0)">
-        <rect width="88" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#a78bfa" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">TensorFlow</text>
-      </g>
-      <g transform="translate(0, 32)">
-        <rect width="101" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#a78bfa" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">Hugging Face</text>
-      </g>
-      <g transform="translate(107, 32)">
-        <rect width="88" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#a78bfa" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">OpenAI API</text>
-      </g>
-      <g transform="translate(0, 64)">
-        <rect width="82" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#a78bfa" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">LangChain</text>
-      </g>
-      <g transform="translate(88, 64)">
-        <rect width="45" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#a78bfa" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">RAG</text>
-      </g>
-      <g transform="translate(0, 96)">
-        <rect width="88" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#a78bfa" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">Agentic AI</text>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(540, 210)">
-    <rect width="250" height="185" class="card-bg" />
-    <path d="M 20 0 L 230 0" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" opacity="0.7" />
-    <circle cx="20" cy="30" r="4" fill="#f59e0b" />
-    <text x="32" y="34" class="card-header">Developer Tools</text>
-    <g transform="translate(15, 55)">
-      <g transform="translate(0, 0)">
-        <rect width="45" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#f59e0b" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">Git</text>
-      </g>
-      <g transform="translate(51, 0)">
-        <rect width="113" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#f59e0b" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">GitHub Actions</text>
-      </g>
-      <g transform="translate(0, 32)">
         <rect width="64" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#f59e0b" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">Docker</text>
+        <text x="32" y="16" text-anchor="middle" class="pill-text">FastAPI</text>
       </g>
-      <g transform="translate(70, 32)">
-        <rect width="70" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#f59e0b" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">Postman</text>
+      <g transform="translate(70, 0)">
+        <rect width="64" height="24" class="pill-bg" />
+        <text x="32" y="16" text-anchor="middle" class="pill-text">Node.js</text>
       </g>
-      <g transform="translate(146, 32)">
+      <g transform="translate(140, 0)">
+        <rect width="64" height="24" class="pill-bg" />
+        <text x="32" y="16" text-anchor="middle" class="pill-text">Express</text>
+      </g>
+      <g transform="translate(0, 32)">
+        <rect width="78" height="24" class="pill-bg" />
+        <text x="39" y="16" text-anchor="middle" class="pill-text">REST APIs</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(0, 191)">
+    <rect width="282.6666666666667" height="175" class="card-bg" />
+    <!-- Fine technical corner accent -->
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#52525b" stroke-width="1.5" />
+    <circle cx="20" cy="24" r="3" fill="#d4d4d8" />
+    <text x="32" y="28" class="card-header">AI & Optimization</text>
+    <line x1="20" y1="42" x2="262.6666666666667" y2="42" stroke="#1f1f23" stroke-width="1" />
+    <g transform="translate(18, 56)">
+      <g transform="translate(0, 0)">
+        <rect width="173" height="24" class="pill-bg" />
+        <text x="86.5" y="16" text-anchor="middle" class="pill-text">Ant Colony Optimization</text>
+      </g>
+      <g transform="translate(0, 32)">
+        <rect width="173" height="24" class="pill-bg" />
+        <text x="86.5" y="16" text-anchor="middle" class="pill-text">Bio-Inspired Algorithms</text>
+      </g>
+      <g transform="translate(179, 32)">
+        <rect width="64" height="24" class="pill-bg" />
+        <text x="32" y="16" text-anchor="middle" class="pill-text">LiteLLM</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(298.6666666666667, 191)">
+    <rect width="282.6666666666667" height="175" class="card-bg" />
+    <!-- Fine technical corner accent -->
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#52525b" stroke-width="1.5" />
+    <circle cx="20" cy="24" r="3" fill="#d4d4d8" />
+    <text x="32" y="28" class="card-header">Databases</text>
+    <line x1="20" y1="42" x2="262.6666666666667" y2="42" stroke="#1f1f23" stroke-width="1" />
+    <g transform="translate(18, 56)">
+      <g transform="translate(0, 0)">
+        <rect width="84" height="24" class="pill-bg" />
+        <text x="42" y="16" text-anchor="middle" class="pill-text">PostgreSQL</text>
+      </g>
+      <g transform="translate(90, 0)">
+        <rect width="71" height="24" class="pill-bg" />
+        <text x="35.5" y="16" text-anchor="middle" class="pill-text">Firebase</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(597.3333333333334, 191)">
+    <rect width="282.6666666666667" height="175" class="card-bg" />
+    <!-- Fine technical corner accent -->
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#52525b" stroke-width="1.5" />
+    <circle cx="20" cy="24" r="3" fill="#d4d4d8" />
+    <text x="32" y="28" class="card-header">Developer Tools</text>
+    <line x1="20" y1="42" x2="262.6666666666667" y2="42" stroke="#1f1f23" stroke-width="1" />
+    <g transform="translate(18, 56)">
+      <g transform="translate(0, 0)">
+        <rect width="37" height="24" class="pill-bg" />
+        <text x="18.5" y="16" text-anchor="middle" class="pill-text">Git</text>
+      </g>
+      <g transform="translate(43, 0)">
+        <rect width="112" height="24" class="pill-bg" />
+        <text x="56" y="16" text-anchor="middle" class="pill-text">GitHub Actions</text>
+      </g>
+      <g transform="translate(161, 0)">
         <rect width="57" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#f59e0b" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">Linux</text>
+        <text x="28.5" y="16" text-anchor="middle" class="pill-text">Docker</text>
       </g>
-      <g transform="translate(0, 64)">
-        <rect width="70" height="24" class="pill-bg" />
-        <circle cx="10" cy="12" r="2.5" fill="#f59e0b" opacity="0.6" />
-        <text x="18" y="15" class="pill-text">VS Code</text>
+      <g transform="translate(0, 32)">
+        <rect width="50" height="24" class="pill-bg" />
+        <text x="25" y="16" text-anchor="middle" class="pill-text">Linux</text>
+      </g>
+      <g transform="translate(56, 32)">
+        <rect width="64" height="24" class="pill-bg" />
+        <text x="32" y="16" text-anchor="middle" class="pill-text">VS Code</text>
       </g>
     </g>
   </g>

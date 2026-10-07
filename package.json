@@ -1,0 +1,22 @@
+{
+  "name": "soham-arch-profile",
+  "version": "2.0.0",
+  "description": "Automated GitHub Profile system for Soham Patil",
+  "main": "scripts/update_readme.js",
+  "scripts": {
+    "fetch:repos": "node scripts/fetch_repositories.js",
+    "generate:hero": "node scripts/generate_hero_svg.js",
+    "generate:tech": "node scripts/generate_tech_stack_svg.js",
+    "generate:stats": "node scripts/generate_stats_svg.js",
+    "compile:readme": "node scripts/update_readme.js",
+    "build": "node scripts/fetch_repositories.js && node scripts/generate_hero_svg.js && node scripts/generate_tech_stack_svg.js && node scripts/generate_stats_svg.js && node scripts/update_readme.js"
+  },
+  "keywords": [
+    "github-profile",
+    "developer-portfolio",
+    "automation",
+    "svg-generation"
+  ],
+  "author": "Soham Patil",
+  "license": "MIT"
+}

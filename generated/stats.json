@@ -1,0 +1,34 @@
+{
+  "totalCommits": 48,
+  "totalStars": 0,
+  "totalPRs": 2,
+  "totalIssues": 0,
+  "contributedTo": 3,
+  "languages": [
+    {
+      "name": "TypeScript",
+      "percentage": 56
+    },
+    {
+      "name": "JavaScript",
+      "percentage": 22.8
+    },
+    {
+      "name": "CSS",
+      "percentage": 7.4
+    },
+    {
+      "name": "Python",
+      "percentage": 6.7
+    },
+    {
+      "name": "Dart",
+      "percentage": 2.1
+    }
+  ],
+  "streak": {
+    "totalContributions": 56,
+    "currentStreak": 1,
+    "longestStreak": 4
+  }
+}

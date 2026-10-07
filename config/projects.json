@@ -1,0 +1,19 @@
+{
+  "featured": [
+    "AntLoad",
+    "Smart-City-Management",
+    "SkillBridge"
+  ],
+  "excluded": [
+    "soham-arch",
+    "newfeel"
+  ],
+  "custom_descriptions": {
+    "AntLoad": "Workload-aware Ant Colony Optimization for dynamic load balancing in AI inference systems.",
+    "Smart-City-Management": "Emergency management and dispatch simulation for urban networks using classical DAA algorithms.",
+    "SkillBridge": "Full-stack developer platform integrating Next.js, PostgreSQL, and LiteLLM proxy tooling.",
+    "SHMS-Helical-Spring-Optimization": "Computational engineering optimization of helical compression springs using the bio-inspired SHMS algorithm.",
+    "GIT_DEV_DAYS": "Modern developer events and resources showcase built with Astro and TypeScript.",
+    "ahilyanagar-municipal-project": "Municipal civic management mobile application architecture built with Flutter and Dart."
+  }
+}

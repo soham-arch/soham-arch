@@ -1,29 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 110" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 94" width="100%" height="100%">
   <defs><style type="text/css">
-    
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap');
-  .card-bg { fill: #0a0f1e; stroke: #1e293b; stroke-width: 1; rx: 12px; }
-  .header-title { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; fill: #e2e8f0; letter-spacing: 0.02em; }
-  .label-text { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 400; fill: #64748b; }
-  .value-text { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; fill: #f1f5f9; }
-
-    .streak-val { font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700; fill: #f1f5f9; }
-    .streak-label { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 600; fill: #64748b; letter-spacing: 0.05em; text-transform: uppercase; }
-  </style></defs>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap');
+  .card-bg { fill: #09090b; stroke: #27272a; stroke-width: 1; rx: 8px; }
+  .header-title { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 13px; font-weight: 600; fill: #f4f4f5; letter-spacing: 0.04em; text-transform: uppercase; }
+  .label-text { font-family: 'JetBrains Mono', monospace, ui-monospace; font-size: 11px; font-weight: 500; fill: #71717a; text-transform: uppercase; letter-spacing: 0.05em; }
+  .value-text { font-family: 'JetBrains Mono', monospace, ui-monospace; font-size: 20px; font-weight: 700; fill: #ffffff; letter-spacing: -0.02em; }
+  .divider-line { stroke: #1f1f23; stroke-width: 1; }
+</style></defs>
   <rect width="100%" height="100%" class="card-bg" />
-  <path d="M 30 0 L 150 0" stroke="#10b981" stroke-width="2" stroke-linecap="round" />
-  <g transform="translate(60, 30)">
-    <text x="0" y="15" class="streak-label">Total Contributions</text>
-    <text x="0" y="50" class="streak-val" fill="#38bdf8">56</text>
+  <line x1="0" y1="0" x2="40" y2="0" stroke="#52525b" stroke-width="1.5" />
+
+  <g transform="translate(48, 26)">
+    <text x="0" y="12" class="label-text">Total Contributions</text>
+    <text x="0" y="44" class="value-text" font-size="24">56</text>
   </g>
-  <line x1="280" y1="20" x2="280" y2="90" stroke="#1e293b" stroke-width="1.5" />
-  <g transform="translate(320, 30)">
-    <text x="0" y="15" class="streak-label" fill="#f43f5e">🔥 Current Streak</text>
-    <text x="0" y="50" class="streak-val" fill="#f43f5e">1 <tspan font-size="14" font-family="Inter" fill="#64748b" font-weight="400">days</tspan></text>
+
+  <line x1="310" y1="18" x2="310" y2="76" class="divider-line" />
+
+  <g transform="translate(350, 26)">
+    <text x="0" y="12" class="label-text">Current Streak</text>
+    <text x="0" y="44" class="value-text" font-size="24">1 <tspan font-size="12" fill="#71717a" font-family="'Inter', sans-serif" font-weight="400">DAYS</tspan></text>
   </g>
-  <line x1="520" y1="20" x2="520" y2="90" stroke="#1e293b" stroke-width="1.5" />
-  <g transform="translate(560, 30)">
-    <text x="0" y="15" class="streak-label" fill="#eab308">🏆 Longest Streak</text>
-    <text x="0" y="50" class="streak-val" fill="#eab308">4 <tspan font-size="14" font-family="Inter" fill="#64748b" font-weight="400">days</tspan></text>
+
+  <line x1="610" y1="18" x2="610" y2="76" class="divider-line" />
+
+  <g transform="translate(650, 26)">
+    <text x="0" y="12" class="label-text">Longest Streak</text>
+    <text x="0" y="44" class="value-text" font-size="24">4 <tspan font-size="12" fill="#71717a" font-family="'Inter', sans-serif" font-weight="400">DAYS</tspan></text>
   </g>
 </svg>

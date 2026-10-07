@@ -1,104 +1,169 @@
 const fs = require('fs');
 const path = require('path');
-const https = require('https');
 
 const rootDir = path.join(__dirname, '..');
-const settingsPath = path.join(rootDir, 'config', 'settings.json');
 const templatePath = path.join(rootDir, 'templates', 'README.template.md');
+const reposDataPath = path.join(rootDir, 'generated', 'repositories.json');
 const outputPath = path.join(rootDir, 'README.md');
 
-const settings = JSON.parse(fs.readFileSync(settingsPath, 'utf8'));
-const username = settings.github_username;
-const token = process.env.GITHUB_TOKEN;
-
-// ⚠ FALLBACK ONLY — local dev placeholder, NOT real data
-const fallbackRepos = settings.projects.map(p => ({
-  name: p.name, html_url: p.github_link, description: p.description,
-  stargazers_count: 0, forks_count: 0, language: p.tech[0]
-}));
-
-function fetchLatestRepos(username, token) {
-  return new Promise((resolve, reject) => {
-    const options = {
-      hostname: 'api.github.com',
-      path: `/users/${username}/repos?sort=updated&direction=desc&per_page=5`,
-      method: 'GET',
-      headers: { 'User-Agent': 'soham-arch-portfolio-updater' }
-    };
-    if (token) options.headers['Authorization'] = `token ${token}`;
-    const req = https.request(options, (res) => {
-      let body = '';
-      res.on('data', (chunk) => body += chunk);
-      res.on('end', () => {
-        if (res.statusCode !== 200) return reject(new Error(`GitHub API status ${res.statusCode}`));
-        try {
-          const repos = JSON.parse(body);
-          if (Array.isArray(repos)) {
-            resolve(repos.filter(r => r.name.toLowerCase() !== username.toLowerCase()).slice(0, 4));
-          } else reject(new Error('Invalid response'));
-        } catch (e) { reject(e); }
-      });
-    });
-    req.on('error', reject);
-    req.end();
-  });
+function formatDate(isoString) {
+  if (!isoString) return 'Recent';
+  try {
+    const d = new Date(isoString);
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return `${months[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+  } catch (_) {
+    return 'Recent';
+  }
 }
 
-// Dark theme repo cards
-function formatReposMarkdown(repos) {
-  let md = '<table width="100%" border="0" cellpadding="8" cellspacing="0">\n';
+function renderFeaturedProjects(repos) {
+  if (!repos || repos.length === 0) {
+    return '<p style="color: #71717a;">No featured repositories configured.</p>';
+  }
+
+  let html = '<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; border-spacing: 0 14px;">\n';
+
+  for (const repo of repos) {
+    const lang = repo.language || 'Plain Text';
+    const dateStr = formatDate(repo.pushed_at || repo.updated_at);
+    const desc = repo.description || 'No repository description provided.';
+
+    html += `  <tr>
+    <td style="background-color: #09090b; border: 1px solid #27272a; border-radius: 8px; padding: 20px 24px;">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="top">
+            <h3 style="margin: 0 0 8px 0; font-size: 17px; font-weight: 700; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+              <a href="${repo.html_url}" style="color: #ffffff; text-decoration: none;">${repo.name}</a>
+              <span style="color: #71717a; font-size: 13px; font-weight: 400; margin-left: 4px;">↗</span>
+            </h3>
+            <p style="margin: 0 0 16px 0; font-size: 13.5px; color: #a1a1aa; line-height: 1.55; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+              ${desc}
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table border="0" cellpadding="0" cellspacing="0" style="font-family: monospace; font-size: 11.5px;">
+              <tr>
+                <td style="background-color: #141416; border: 1px solid #27272a; border-radius: 4px; padding: 3px 8px; color: #d4d4d8;">
+                  ${lang}
+                </td>
+                <td style="padding-left: 14px; color: #71717a;">★ ${repo.stars}</td>
+                <td style="padding-left: 14px; color: #71717a;">⑂ ${repo.forks}</td>
+                <td style="padding-left: 14px; color: #52525b;">Updated ${dateStr}</td>
+                <td style="padding-left: 20px;">
+                  <a href="${repo.html_url}" style="color: #d4d4d8; text-decoration: none; font-weight: 600;">View Repository →</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>\n`;
+  }
+
+  html += '</table>';
+  return html;
+}
+
+function renderRecentProjects(repos) {
+  if (!repos || repos.length === 0) {
+    return '<p style="color: #71717a;">No additional repositories found.</p>';
+  }
+
+  let html = '<table width="100%" border="0" cellpadding="8" cellspacing="0" style="border-collapse: separate; border-spacing: 12px 12px;">\n';
+
   for (let i = 0; i < repos.length; i += 2) {
-    md += '  <tr style="border: none;">\n';
-    const renderCard = (repo) => `
-      <div style="background-color: #0a0f1e; border: 1px solid #1e293b; border-radius: 12px; padding: 18px; min-height: 120px;">
-        <h4 style="margin: 0 0 10px 0; font-family: sans-serif;">
-          <a href="${repo.html_url}" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 700;">📂 ${repo.name}</a>
+    html += '  <tr>\n';
+
+    const renderCard = (repo) => {
+      const lang = repo.language || 'Plain Text';
+      const desc = repo.description || 'No repository description provided.';
+      const dateStr = formatDate(repo.pushed_at || repo.updated_at);
+      return `<div style="background-color: #09090b; border: 1px solid #27272a; border-radius: 8px; padding: 18px 20px; min-height: 120px;">
+        <h4 style="margin: 0 0 8px 0; font-size: 14.5px; font-weight: 700; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+          <a href="${repo.html_url}" style="color: #ffffff; text-decoration: none;">${repo.name}</a>
+          <span style="color: #71717a; font-size: 12px; font-weight: 400; margin-left: 3px;">↗</span>
         </h4>
-        <p style="margin: 0 0 14px 0; font-size: 13px; color: #94a3b8; line-height: 1.5; font-family: sans-serif;">
-          ${repo.description || 'No description provided.'}
+        <p style="margin: 0 0 14px 0; font-size: 12.5px; color: #a1a1aa; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+          ${desc}
         </p>
-        <div style="font-size: 11px; color: #64748b; font-family: sans-serif;">
-          <span style="margin-right: 15px;">⭐ ${repo.stargazers_count || 0}</span>
-          <span style="margin-right: 15px;">🍴 ${repo.forks_count || 0}</span>
-          <span style="color: #3b82f6;">●</span> ${repo.language || 'Code'}
+        <div style="font-family: monospace; font-size: 11px; color: #71717a;">
+          <span style="color: #d4d4d8; background-color: #141416; border: 1px solid #27272a; border-radius: 4px; padding: 2px 6px; margin-right: 10px;">${lang}</span>
+          <span style="margin-right: 10px;">★ ${repo.stars}</span>
+          <span style="margin-right: 10px;">⑂ ${repo.forks}</span>
+          <span style="color: #52525b;">${dateStr}</span>
         </div>
       </div>`;
-    
-    md += `    <td width="50%" valign="top" style="border: none; padding-bottom: 15px;">${renderCard(repos[i])}\n    </td>\n`;
+    };
+
+    html += `    <td width="50%" valign="top" style="padding: 0; border: none;">${renderCard(repos[i])}</td>\n`;
+
     if (repos[i + 1]) {
-      md += `    <td width="50%" valign="top" style="border: none; padding-bottom: 15px;">${renderCard(repos[i + 1])}\n    </td>\n`;
+      html += `    <td width="50%" valign="top" style="padding: 0; border: none;">${renderCard(repos[i + 1])}</td>\n`;
     } else {
-      md += '    <td width="50%" style="border: none;"></td>\n';
+      html += '    <td width="50%" style="padding: 0; border: none;"></td>\n';
     }
-    md += '  </tr>\n';
+
+    html += '  </tr>\n';
   }
-  md += '</table>';
-  return md;
+
+  html += '</table>';
+  return html;
 }
 
-async function main() {
-  console.log('Compiling README.md from template...');
-  let repos = fallbackRepos;
-  try {
-    const fetched = await fetchLatestRepos(username, token);
-    if (fetched && fetched.length > 0) { repos = fetched; console.log(`Fetched ${repos.length} repos.`); }
-  } catch (err) { console.warn('Fallback repos used:', err.message); }
+function replaceSection(content, startMarker, endMarker, replacement, isInline = false) {
+  const startIndex = content.indexOf(startMarker);
+  const endIndex = content.indexOf(endMarker);
+  if (startIndex === -1 || endIndex === -1) {
+    console.warn(`Section markers not found: ${startMarker}`);
+    return content;
+  }
+  if (isInline) {
+    return content.substring(0, startIndex + startMarker.length) +
+      replacement +
+      content.substring(endIndex);
+  }
+  return content.substring(0, startIndex + startMarker.length) +
+    '\n' + replacement + '\n' +
+    content.substring(endIndex);
+}
 
-  const reposMarkdown = formatReposMarkdown(repos);
+function main() {
+  console.log('[README Compiler] Compiling README.md from template...');
+
+  if (!fs.existsSync(templatePath)) {
+    throw new Error(`Template file not found: ${templatePath}`);
+  }
+
+  let reposData = { featured: [], recent: [] };
+  if (fs.existsSync(reposDataPath)) {
+    try {
+      reposData = JSON.parse(fs.readFileSync(reposDataPath, 'utf8'));
+    } catch (e) {
+      console.warn('[README Compiler] Could not parse repositories.json, using fallback.');
+    }
+  }
+
   let template = fs.readFileSync(templatePath, 'utf8');
-  
-  // Replace LATEST_REPOS
-  const sr = '<!-- START_SECTION:latest_repos -->', er = '<!-- END_SECTION:latest_repos -->';
-  const si = template.indexOf(sr), ei = template.indexOf(er);
-  if (si !== -1 && ei !== -1) template = template.substring(0, si + sr.length) + '\n' + reposMarkdown + '\n' + template.substring(ei);
-  
-  // Replace date
-  const sd = '<!-- START_SECTION:update_date -->', ed = '<!-- END_SECTION:update_date -->';
-  const sdi = template.indexOf(sd), edi = template.indexOf(ed);
-  if (sdi !== -1 && edi !== -1) template = template.substring(0, sdi + sd.length) + new Date().toISOString().split('T')[0] + template.substring(edi);
-  
-  fs.writeFileSync(outputPath, template);
-  console.log('README.md compiled successfully!');
+
+  // Inject Featured Projects
+  const featuredHtml = renderFeaturedProjects(reposData.featured || []);
+  template = replaceSection(template, '<!-- START_SECTION:featured_projects -->', '<!-- END_SECTION:featured_projects -->', featuredHtml);
+
+  // Inject Recent Projects
+  const recentHtml = renderRecentProjects(reposData.recent || []);
+  template = replaceSection(template, '<!-- START_SECTION:recent_projects -->', '<!-- END_SECTION:recent_projects -->', recentHtml);
+
+  // Inject Update Date
+  const today = new Date().toISOString().split('T')[0];
+  template = replaceSection(template, '<!-- START_SECTION:update_date -->', '<!-- END_SECTION:update_date -->', today, true);
+
+  fs.writeFileSync(outputPath, template, 'utf8');
+  console.log(`[README Compiler] Successfully compiled ${outputPath}`);
 }
 
-main().catch(console.error);
+main();

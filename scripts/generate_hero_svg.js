@@ -1,4 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 210" width="100%" height="100%">
+const fs = require('fs');
+const path = require('path');
+
+const targetDir = path.join(__dirname, '..', 'assets', 'svg');
+if (!fs.existsSync(targetDir)) {
+  fs.mkdirSync(targetDir, { recursive: true });
+}
+
+function generateHeroSVG() {
+  const width = 880;
+  const height = 210;
+
+  const content = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="100%" height="100%">
   <defs>
     <style type="text/css">
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap');
@@ -25,14 +38,14 @@
   </defs>
 
   <!-- Background surface -->
-  <rect width="880" height="210" class="bg" />
+  <rect width="${width}" height="${height}" class="bg" />
 
   <!-- Subtle interior border gradient highlight -->
-  <rect x="1" y="1" width="878" height="208" fill="url(#silver-fade)" rx="7" />
+  <rect x="1" y="1" width="${width - 2}" height="${height - 2}" fill="url(#silver-fade)" rx="7" />
 
   <!-- Subtle engineering grid lines on left & right -->
-  <line x1="45" y1="0" x2="45" y2="210" class="grid-line" />
-  <line x1="640" y1="0" x2="640" y2="210" class="grid-line" />
+  <line x1="45" y1="0" x2="45" y2="${height}" class="grid-line" />
+  <line x1="${width - 240}" y1="0" x2="${width - 240}" y2="${height}" class="grid-line" />
 
   <!-- Main Left Content -->
   <g transform="translate(65, 36)">
@@ -73,7 +86,7 @@
   </g>
 
   <!-- Right Side: Architectural Schematic / Coordinate Accent -->
-  <g transform="translate(690, 105)">
+  <g transform="translate(${width - 190}, 105)">
     <!-- Concentric radar/schematic circles -->
     <circle cx="60" cy="0" r="70" fill="none" class="schematic-line" />
     <circle cx="60" cy="0" r="46" fill="none" class="schematic-accent" />
@@ -93,3 +106,11 @@
     <text x="60" y="86" text-anchor="middle" class="schematic-coord">18.5204° N · 73.8567° E</text>
   </g>
 </svg>
+`.trim();
+
+  const outputPath = path.join(targetDir, 'hero_banner.svg');
+  fs.writeFileSync(outputPath, content, 'utf8');
+  console.log('[Hero SVG] Successfully generated assets/svg/hero_banner.svg');
+}
+
+generateHeroSVG();

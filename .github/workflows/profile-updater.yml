@@ -5,6 +5,10 @@ on:
     - cron: '0 */12 * * *'
   push:
     branches: [main, master]
+    paths-ignore:
+      - 'README.md'
+      - 'assets/svg/**'
+      - 'generated/**'
   workflow_dispatch:
 
 permissions:
@@ -17,41 +21,42 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
-      - name: Generate Section Dividers
-        run: node scripts/generate_dividers.js
+      - name: Fetch Public Repositories
+        run: node scripts/fetch_repositories.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate Hero Banner SVG
+        run: node scripts/generate_hero_svg.js
 
       - name: Generate Tech Stack SVG
         run: node scripts/generate_tech_stack_svg.js
 
-      - name: Generate Project Card SVGs
-        run: node scripts/generate_project_cards_svg.js
-
-      - name: Generate Learning Journey SVG
-        run: node scripts/generate_learning_journey_svg.js
-
-      - name: Generate Custom SVG Dashboards
+      - name: Generate Stats SVG Dashboards
         run: node scripts/generate_stats_svg.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate Contribution Grid Snake Animation
         uses: platane/snk@v3
+        continue-on-error: true
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            assets/svg/github-contribution-grid-snake.svg?color_snake=#38bdf8&color_dots=#0a0f1e,#0d1b3e,#1e293b,#3b82f6,#818cf8
+            assets/svg/github-contribution-grid-snake.svg?color_snake=#d4d4d8&color_dots=#121214,#18181b,#27272a,#52525b,#a1a1aa
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Slow down snake animation by doubling SMIL durations
       - name: Slow Down Snake Animation Speed
+        continue-on-error: true
         run: |
           SNAKE_FILE="assets/svg/github-contribution-grid-snake.svg"
           if [ -f "$SNAKE_FILE" ]; then
@@ -68,12 +73,15 @@ jobs:
 
       - name: Compile Profile README
         run: node scripts/update_readme.js
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and Push Profile Updates
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "github-actions[bot]"
-          git add README.md assets/svg/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update profile dashboard & assets [skip ci]" && git push)
+          git add README.md assets/svg/ generated/
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "chore: auto-update profile dashboard & repositories [skip ci]"
+            git push
+          else
+            echo "No changes detected. Skipping commit."
+          fi
