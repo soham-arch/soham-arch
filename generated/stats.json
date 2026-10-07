@@ -1,5 +1,5 @@
 {
-  "totalCommits": 48,
+  "totalCommits": 49,
   "totalStars": 0,
   "totalPRs": 2,
   "totalIssues": 0,
@@ -7,28 +7,28 @@
   "languages": [
     {
       "name": "TypeScript",
-      "percentage": 56
+      "percentage": 63.6
     },
     {
       "name": "JavaScript",
-      "percentage": 22.8
-    },
-    {
-      "name": "CSS",
-      "percentage": 7.4
+      "percentage": 16
     },
     {
       "name": "Python",
-      "percentage": 6.7
+      "percentage": 8
     },
     {
       "name": "Dart",
-      "percentage": 2.1
+      "percentage": 3.6
+    },
+    {
+      "name": "C++",
+      "percentage": 2.2
     }
   ],
   "streak": {
-    "totalContributions": 56,
-    "currentStreak": 1,
+    "totalContributions": 57,
+    "currentStreak": 2,
     "longestStreak": 4
   }
 }
