@@ -139,7 +139,7 @@ My work focuses on designing pragmatic computational systems — from workload-a
                 </td>
                 <td style="padding-left: 14px; color: #71717a;">★ 0</td>
                 <td style="padding-left: 14px; color: #71717a;">⑂ 0</td>
-                <td style="padding-left: 14px; color: #52525b;">Updated Sep 2026</td>
+                <td style="padding-left: 14px; color: #52525b;">Updated Oct 2026</td>
                 <td style="padding-left: 20px;">
                   <a href="https://github.com/soham-arch/SkillBridge" style="color: #d4d4d8; text-decoration: none; font-weight: 600;">View Repository →</a>
                 </td>
