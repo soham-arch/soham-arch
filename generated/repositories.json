@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T17:10:07.538Z",
+  "updated_at": "2026-10-11T05:01:14.138Z",
   "username": "soham-arch",
   "total_public": 9,
   "featured": [
@@ -64,7 +64,7 @@
       "forks": 0,
       "fork": false,
       "archived": false,
-      "pushed_at": "2026-10-03T19:13:37Z",
+      "pushed_at": "2026-10-10T19:15:15Z",
       "updated_at": "2026-09-19T08:33:04Z",
       "created_at": "2026-09-19T06:40:20Z",
       "default_branch": "main"
@@ -120,6 +120,22 @@
   ],
   "all": [
     {
+      "name": "GIT_DEV_DAYS",
+      "full_name": "soham-arch/GIT_DEV_DAYS",
+      "html_url": "https://github.com/soham-arch/GIT_DEV_DAYS",
+      "description": "Modern developer events and resources showcase built with Astro and TypeScript.",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-10-10T19:15:15Z",
+      "updated_at": "2026-09-19T08:33:04Z",
+      "created_at": "2026-09-19T06:40:20Z",
+      "default_branch": "main"
+    },
+    {
       "name": "AntLoad",
       "full_name": "soham-arch/AntLoad",
       "html_url": "https://github.com/soham-arch/AntLoad",
@@ -133,22 +149,6 @@
       "pushed_at": "2026-10-06T05:12:25Z",
       "updated_at": "2026-10-06T05:12:29Z",
       "created_at": "2026-10-06T05:08:58Z",
-      "default_branch": "main"
-    },
-    {
-      "name": "GIT_DEV_DAYS",
-      "full_name": "soham-arch/GIT_DEV_DAYS",
-      "html_url": "https://github.com/soham-arch/GIT_DEV_DAYS",
-      "description": "Modern developer events and resources showcase built with Astro and TypeScript.",
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "archived": false,
-      "pushed_at": "2026-10-03T19:13:37Z",
-      "updated_at": "2026-09-19T08:33:04Z",
-      "created_at": "2026-09-19T06:40:20Z",
       "default_branch": "main"
     },
     {
