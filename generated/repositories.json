@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-15T03:58:43.561Z",
+  "updated_at": "2026-10-15T16:38:54.661Z",
   "username": "soham-arch",
-  "total_public": 9,
+  "total_public": 10,
   "featured": [
     {
       "name": "AntLoad",
@@ -53,6 +53,22 @@
     }
   ],
   "recent": [
+    {
+      "name": "cloud-cicd-lab",
+      "full_name": "soham-arch/cloud-cicd-lab",
+      "html_url": "https://github.com/soham-arch/cloud-cicd-lab",
+      "description": "No repository description provided.",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-10-15T16:18:59Z",
+      "updated_at": "2026-10-15T16:19:03Z",
+      "created_at": "2026-10-15T15:17:44Z",
+      "default_branch": "main"
+    },
     {
       "name": "GIT_DEV_DAYS",
       "full_name": "soham-arch/GIT_DEV_DAYS",
@@ -119,6 +135,22 @@
     }
   ],
   "all": [
+    {
+      "name": "cloud-cicd-lab",
+      "full_name": "soham-arch/cloud-cicd-lab",
+      "html_url": "https://github.com/soham-arch/cloud-cicd-lab",
+      "description": "No repository description provided.",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-10-15T16:18:59Z",
+      "updated_at": "2026-10-15T16:19:03Z",
+      "created_at": "2026-10-15T15:17:44Z",
+      "default_branch": "main"
+    },
     {
       "name": "SkillBridge",
       "full_name": "soham-arch/SkillBridge",
