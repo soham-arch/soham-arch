@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T15:16:34.357Z",
+  "updated_at": "2026-10-18T03:51:33.798Z",
   "username": "soham-arch",
   "total_public": 10,
   "featured": [
@@ -54,6 +54,22 @@
   ],
   "recent": [
     {
+      "name": "GIT_DEV_DAYS",
+      "full_name": "soham-arch/GIT_DEV_DAYS",
+      "html_url": "https://github.com/soham-arch/GIT_DEV_DAYS",
+      "description": "Modern developer events and resources showcase built with Astro and TypeScript.",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-10-17T19:13:27Z",
+      "updated_at": "2026-09-19T08:33:04Z",
+      "created_at": "2026-09-19T06:40:20Z",
+      "default_branch": "main"
+    },
+    {
       "name": "cloud-cicd-lab",
       "full_name": "soham-arch/cloud-cicd-lab",
       "html_url": "https://github.com/soham-arch/cloud-cicd-lab",
@@ -67,22 +83,6 @@
       "pushed_at": "2026-10-15T16:18:59Z",
       "updated_at": "2026-10-15T16:19:03Z",
       "created_at": "2026-10-15T15:17:44Z",
-      "default_branch": "main"
-    },
-    {
-      "name": "GIT_DEV_DAYS",
-      "full_name": "soham-arch/GIT_DEV_DAYS",
-      "html_url": "https://github.com/soham-arch/GIT_DEV_DAYS",
-      "description": "Modern developer events and resources showcase built with Astro and TypeScript.",
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "archived": false,
-      "pushed_at": "2026-10-10T19:15:15Z",
-      "updated_at": "2026-09-19T08:33:04Z",
-      "created_at": "2026-09-19T06:40:20Z",
       "default_branch": "main"
     },
     {
@@ -136,6 +136,22 @@
   ],
   "all": [
     {
+      "name": "GIT_DEV_DAYS",
+      "full_name": "soham-arch/GIT_DEV_DAYS",
+      "html_url": "https://github.com/soham-arch/GIT_DEV_DAYS",
+      "description": "Modern developer events and resources showcase built with Astro and TypeScript.",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-10-17T19:13:27Z",
+      "updated_at": "2026-09-19T08:33:04Z",
+      "created_at": "2026-09-19T06:40:20Z",
+      "default_branch": "main"
+    },
+    {
       "name": "cloud-cicd-lab",
       "full_name": "soham-arch/cloud-cicd-lab",
       "html_url": "https://github.com/soham-arch/cloud-cicd-lab",
@@ -165,22 +181,6 @@
       "pushed_at": "2026-10-11T17:20:12Z",
       "updated_at": "2026-10-11T17:26:29Z",
       "created_at": "2026-09-21T14:51:29Z",
-      "default_branch": "main"
-    },
-    {
-      "name": "GIT_DEV_DAYS",
-      "full_name": "soham-arch/GIT_DEV_DAYS",
-      "html_url": "https://github.com/soham-arch/GIT_DEV_DAYS",
-      "description": "Modern developer events and resources showcase built with Astro and TypeScript.",
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "archived": false,
-      "pushed_at": "2026-10-10T19:15:15Z",
-      "updated_at": "2026-09-19T08:33:04Z",
-      "created_at": "2026-09-19T06:40:20Z",
       "default_branch": "main"
     },
     {
