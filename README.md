@@ -162,6 +162,21 @@ My work focuses on designing pragmatic computational systems — from workload-a
   <tr>
     <td width="50%" valign="top" style="padding: 0; border: none;"><div style="background-color: #09090b; border: 1px solid #27272a; border-radius: 8px; padding: 18px 20px; min-height: 120px;">
         <h4 style="margin: 0 0 8px 0; font-size: 14.5px; font-weight: 700; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+          <a href="https://github.com/soham-arch/Network-Troubleshooting-Assistant-" style="color: #ffffff; text-decoration: none;">Network-Troubleshooting-Assistant-</a>
+          <span style="color: #71717a; font-size: 12px; font-weight: 400; margin-left: 3px;">↗</span>
+        </h4>
+        <p style="margin: 0 0 14px 0; font-size: 12.5px; color: #a1a1aa; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+          No repository description provided.
+        </p>
+        <div style="font-family: monospace; font-size: 11px; color: #71717a;">
+          <span style="color: #d4d4d8; background-color: #141416; border: 1px solid #27272a; border-radius: 4px; padding: 2px 6px; margin-right: 10px;">Python</span>
+          <span style="margin-right: 10px;">★ 0</span>
+          <span style="margin-right: 10px;">⑂ 0</span>
+          <span style="color: #52525b;">Oct 2026</span>
+        </div>
+      </div></td>
+    <td width="50%" valign="top" style="padding: 0; border: none;"><div style="background-color: #09090b; border: 1px solid #27272a; border-radius: 8px; padding: 18px 20px; min-height: 120px;">
+        <h4 style="margin: 0 0 8px 0; font-size: 14.5px; font-weight: 700; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
           <a href="https://github.com/soham-arch/GIT_DEV_DAYS" style="color: #ffffff; text-decoration: none;">GIT_DEV_DAYS</a>
           <span style="color: #71717a; font-size: 12px; font-weight: 400; margin-left: 3px;">↗</span>
         </h4>
@@ -175,6 +190,8 @@ My work focuses on designing pragmatic computational systems — from workload-a
           <span style="color: #52525b;">Oct 2026</span>
         </div>
       </div></td>
+  </tr>
+  <tr>
     <td width="50%" valign="top" style="padding: 0; border: none;"><div style="background-color: #09090b; border: 1px solid #27272a; border-radius: 8px; padding: 18px 20px; min-height: 120px;">
         <h4 style="margin: 0 0 8px 0; font-size: 14.5px; font-weight: 700; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
           <a href="https://github.com/soham-arch/cloud-cicd-lab" style="color: #ffffff; text-decoration: none;">cloud-cicd-lab</a>
@@ -190,8 +207,6 @@ My work focuses on designing pragmatic computational systems — from workload-a
           <span style="color: #52525b;">Oct 2026</span>
         </div>
       </div></td>
-  </tr>
-  <tr>
     <td width="50%" valign="top" style="padding: 0; border: none;"><div style="background-color: #09090b; border: 1px solid #27272a; border-radius: 8px; padding: 18px 20px; min-height: 120px;">
         <h4 style="margin: 0 0 8px 0; font-size: 14.5px; font-weight: 700; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
           <a href="https://github.com/soham-arch/SHMS-Helical-Spring-Optimization" style="color: #ffffff; text-decoration: none;">SHMS-Helical-Spring-Optimization</a>
@@ -207,6 +222,8 @@ My work focuses on designing pragmatic computational systems — from workload-a
           <span style="color: #52525b;">May 2026</span>
         </div>
       </div></td>
+  </tr>
+  <tr>
     <td width="50%" valign="top" style="padding: 0; border: none;"><div style="background-color: #09090b; border: 1px solid #27272a; border-radius: 8px; padding: 18px 20px; min-height: 120px;">
         <h4 style="margin: 0 0 8px 0; font-size: 14.5px; font-weight: 700; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
           <a href="https://github.com/soham-arch/ahilyanagar-municipal-project" style="color: #ffffff; text-decoration: none;">ahilyanagar-municipal-project</a>
@@ -222,8 +239,6 @@ My work focuses on designing pragmatic computational systems — from workload-a
           <span style="color: #52525b;">Mar 2026</span>
         </div>
       </div></td>
-  </tr>
-  <tr>
     <td width="50%" valign="top" style="padding: 0; border: none;"><div style="background-color: #09090b; border: 1px solid #27272a; border-radius: 8px; padding: 18px 20px; min-height: 120px;">
         <h4 style="margin: 0 0 8px 0; font-size: 14.5px; font-weight: 700; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
           <a href="https://github.com/soham-arch/portfolio-website" style="color: #ffffff; text-decoration: none;">portfolio-website</a>
@@ -239,7 +254,6 @@ My work focuses on designing pragmatic computational systems — from workload-a
           <span style="color: #52525b;">Nov 2024</span>
         </div>
       </div></td>
-    <td width="50%" style="padding: 0; border: none;"></td>
   </tr>
 </table>
 <!-- END_SECTION:recent_projects -->
