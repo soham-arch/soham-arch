@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T03:59:38.545Z",
+  "updated_at": "2026-10-25T15:50:03.067Z",
   "username": "soham-arch",
   "total_public": 11,
   "featured": [
@@ -46,8 +46,8 @@
       "forks": 0,
       "fork": false,
       "archived": false,
-      "pushed_at": "2026-10-18T15:47:02Z",
-      "updated_at": "2026-10-18T15:47:06Z",
+      "pushed_at": "2026-10-25T15:32:47Z",
+      "updated_at": "2026-10-25T15:32:51Z",
       "created_at": "2026-09-21T14:51:29Z",
       "default_branch": "main"
     }
@@ -152,6 +152,22 @@
   ],
   "all": [
     {
+      "name": "SkillBridge",
+      "full_name": "soham-arch/SkillBridge",
+      "html_url": "https://github.com/soham-arch/SkillBridge",
+      "description": "Full-stack developer platform integrating Next.js, PostgreSQL, and LiteLLM proxy tooling.",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-10-25T15:32:47Z",
+      "updated_at": "2026-10-25T15:32:51Z",
+      "created_at": "2026-09-21T14:51:29Z",
+      "default_branch": "main"
+    },
+    {
       "name": "GIT_DEV_DAYS",
       "full_name": "soham-arch/GIT_DEV_DAYS",
       "html_url": "https://github.com/soham-arch/GIT_DEV_DAYS",
@@ -181,22 +197,6 @@
       "pushed_at": "2026-10-21T06:20:13Z",
       "updated_at": "2026-10-21T06:20:17Z",
       "created_at": "2026-10-21T06:14:02Z",
-      "default_branch": "main"
-    },
-    {
-      "name": "SkillBridge",
-      "full_name": "soham-arch/SkillBridge",
-      "html_url": "https://github.com/soham-arch/SkillBridge",
-      "description": "Full-stack developer platform integrating Next.js, PostgreSQL, and LiteLLM proxy tooling.",
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "archived": false,
-      "pushed_at": "2026-10-18T15:47:02Z",
-      "updated_at": "2026-10-18T15:47:06Z",
-      "created_at": "2026-09-21T14:51:29Z",
       "default_branch": "main"
     },
     {
