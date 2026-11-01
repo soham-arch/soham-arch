@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T17:03:26.326Z",
+  "updated_at": "2026-11-01T05:17:47.215Z",
   "username": "soham-arch",
   "total_public": 11,
   "featured": [
@@ -64,7 +64,7 @@
       "forks": 0,
       "fork": false,
       "archived": false,
-      "pushed_at": "2026-10-24T19:14:06Z",
+      "pushed_at": "2026-10-31T19:13:31Z",
       "updated_at": "2026-09-19T08:33:04Z",
       "created_at": "2026-09-19T06:40:20Z",
       "default_branch": "main"
@@ -152,6 +152,22 @@
   ],
   "all": [
     {
+      "name": "GIT_DEV_DAYS",
+      "full_name": "soham-arch/GIT_DEV_DAYS",
+      "html_url": "https://github.com/soham-arch/GIT_DEV_DAYS",
+      "description": "Modern developer events and resources showcase built with Astro and TypeScript.",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-10-31T19:13:31Z",
+      "updated_at": "2026-09-19T08:33:04Z",
+      "created_at": "2026-09-19T06:40:20Z",
+      "default_branch": "main"
+    },
+    {
       "name": "SkillBridge",
       "full_name": "soham-arch/SkillBridge",
       "html_url": "https://github.com/soham-arch/SkillBridge",
@@ -165,22 +181,6 @@
       "pushed_at": "2026-10-27T04:36:24Z",
       "updated_at": "2026-10-27T04:36:28Z",
       "created_at": "2026-09-21T14:51:29Z",
-      "default_branch": "main"
-    },
-    {
-      "name": "GIT_DEV_DAYS",
-      "full_name": "soham-arch/GIT_DEV_DAYS",
-      "html_url": "https://github.com/soham-arch/GIT_DEV_DAYS",
-      "description": "Modern developer events and resources showcase built with Astro and TypeScript.",
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "archived": false,
-      "pushed_at": "2026-10-24T19:14:06Z",
-      "updated_at": "2026-09-19T08:33:04Z",
-      "created_at": "2026-09-19T06:40:20Z",
       "default_branch": "main"
     },
     {
