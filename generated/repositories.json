@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T17:49:02.599Z",
+  "updated_at": "2026-11-15T05:42:20.517Z",
   "username": "soham-arch",
   "total_public": 11,
   "featured": [
@@ -54,6 +54,22 @@
   ],
   "recent": [
     {
+      "name": "GIT_DEV_DAYS",
+      "full_name": "soham-arch/GIT_DEV_DAYS",
+      "html_url": "https://github.com/soham-arch/GIT_DEV_DAYS",
+      "description": "Modern developer events and resources showcase built with Astro and TypeScript.",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-11-14T19:14:06Z",
+      "updated_at": "2026-09-19T08:33:04Z",
+      "created_at": "2026-09-19T06:40:20Z",
+      "default_branch": "main"
+    },
+    {
       "name": "Smart_Highway",
       "full_name": "soham-arch/Smart_Highway",
       "html_url": "https://github.com/soham-arch/Smart_Highway",
@@ -67,22 +83,6 @@
       "pushed_at": "2026-11-11T14:38:33Z",
       "updated_at": "2026-11-11T14:38:33Z",
       "created_at": "2026-11-11T14:38:31Z",
-      "default_branch": "main"
-    },
-    {
-      "name": "GIT_DEV_DAYS",
-      "full_name": "soham-arch/GIT_DEV_DAYS",
-      "html_url": "https://github.com/soham-arch/GIT_DEV_DAYS",
-      "description": "Modern developer events and resources showcase built with Astro and TypeScript.",
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "archived": false,
-      "pushed_at": "2026-10-31T19:13:31Z",
-      "updated_at": "2026-09-19T08:33:04Z",
-      "created_at": "2026-09-19T06:40:20Z",
       "default_branch": "main"
     },
     {
@@ -152,6 +152,22 @@
   ],
   "all": [
     {
+      "name": "GIT_DEV_DAYS",
+      "full_name": "soham-arch/GIT_DEV_DAYS",
+      "html_url": "https://github.com/soham-arch/GIT_DEV_DAYS",
+      "description": "Modern developer events and resources showcase built with Astro and TypeScript.",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-11-14T19:14:06Z",
+      "updated_at": "2026-09-19T08:33:04Z",
+      "created_at": "2026-09-19T06:40:20Z",
+      "default_branch": "main"
+    },
+    {
       "name": "Smart_Highway",
       "full_name": "soham-arch/Smart_Highway",
       "html_url": "https://github.com/soham-arch/Smart_Highway",
@@ -165,22 +181,6 @@
       "pushed_at": "2026-11-11T14:38:33Z",
       "updated_at": "2026-11-11T14:38:33Z",
       "created_at": "2026-11-11T14:38:31Z",
-      "default_branch": "main"
-    },
-    {
-      "name": "GIT_DEV_DAYS",
-      "full_name": "soham-arch/GIT_DEV_DAYS",
-      "html_url": "https://github.com/soham-arch/GIT_DEV_DAYS",
-      "description": "Modern developer events and resources showcase built with Astro and TypeScript.",
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "archived": false,
-      "pushed_at": "2026-10-31T19:13:31Z",
-      "updated_at": "2026-09-19T08:33:04Z",
-      "created_at": "2026-09-19T06:40:20Z",
       "default_branch": "main"
     },
     {
