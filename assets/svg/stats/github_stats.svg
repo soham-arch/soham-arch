@@ -38,6 +38,6 @@
   <line x1="20" y1="162" x2="410" y2="162" class="divider-line" />
   <g transform="translate(24, 184)">
     <text x="0" y="0" class="label-text">Repositories Contributed</text>
-    <text x="382" y="-1" class="value-text" font-size="14" text-anchor="end">3</text>
+    <text x="382" y="-1" class="value-text" font-size="14" text-anchor="end">2</text>
   </g>
 </svg>
